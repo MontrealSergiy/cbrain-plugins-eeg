@@ -207,7 +207,7 @@
             "id": "folder_out",
             "name": "Output folder",
             "description": "A folder containing the output files.",
-            "path-template": "[output]",
+            "path-template": "[input_directory]/[output]",
             "list": false,
             "optional": false
 	}
