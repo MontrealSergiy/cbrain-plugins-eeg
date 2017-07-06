@@ -202,7 +202,7 @@
     },{
          "id": "output",
          "name": "Output directory",
-         "type": "File",
+         "type": "String",
          "description": "Directory containing the processed files.",
          "value-key": "[output]",
          "list": false,
