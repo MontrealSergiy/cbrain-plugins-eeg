@@ -199,7 +199,15 @@
 	"value-key": "[storexyz]",
         "command-line-flag": "--storexyz",
         "optional": true
-    } 
+    },{
+         "id": "output",
+         "name": "Output directory",
+         "type": "File",
+         "description": "Directory containing the processed files.",
+         "value-key": "[output]",
+         "list": false,
+         "optional": false
+      }
                
               ],
     "output-files": [
