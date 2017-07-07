@@ -201,8 +201,9 @@
         "optional": true
     },{
          "id": "output",
-         "name": "Output directory",
+         "name": "Output directory name",
          "type": "String",
+	 "default-value": "results",
          "description": "Directory containing the processed files.",
          "value-key": "[output]",
          "list": false,
