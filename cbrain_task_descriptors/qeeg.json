@@ -2,7 +2,7 @@
     "name": "qeeg",
     "tool-version": "undefined",
     "description": "qeeg application",
-    "command-line": "qeegt.sh --input [input_directory]/[basename] --state [state] --lwin [lwin] --fmin [fmin] --freqres [freqres] --fmax [fmax] --wbands [wbands] [brain] [pg_apply] [bbsm] [nbsm] [spectra] [bbsmz] [nbsmz] [ssz] [corr] [cohe] [phdiff] [fcorr] [storexyz] --output [output]",
+    "command-line": "qeegt.sh --input [input_directory]/[basename] --state [state] --lwin [lwin] --fmin [fmin] --freqres [freqres] --fmax [fmax] --wbands [wbands] [brain] [pg_apply] [bbsm] [nbsm] [spectra] [bbsmz] [nbsmz] [ssz] [corr] [cohe] [phdiff] [fcorr] [storexyz] --output \"results\" ",
     "container-image": {
        "type": "docker",
        "image": "mcin/qeeg:latest"	
@@ -199,16 +199,7 @@
 	"value-key": "[storexyz]",
         "command-line-flag": "--storexyz",
         "optional": true
-    },{
-         "id": "output",
-         "name": "Output directory name",
-         "type": "String",
-	 "default-value": "results",
-         "description": "Directory containing the processed files.",
-         "value-key": "[output]",
-         "list": false,
-         "optional": false
-      }
+    }
                
               ],
     "output-files": [
@@ -216,7 +207,7 @@
             "id": "folder_out",
             "name": "Output folder",
             "description": "A folder containing the output files.",
-            "path-template": "[output]",
+            "path-template": "results",
             "list": false,
             "optional": false
 	}
