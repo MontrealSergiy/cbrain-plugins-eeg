@@ -1,6 +1,8 @@
 {
     "tool-version": "undefined", 
     "name": "qeeg", 
+    "author": "Neuroinformatics Collaboratory", 
+    "descriptor-url": "https://github.com/big-data-lab-team/cbrain-plugins-eeg/blob/master/cbrain_task_descriptors/qeeg.json", 
     "command-line": "qeegt.sh --input [input_directory]/[basename] --state [state] --lwin [lwin] --fmin [fmin] --freqres [freqres] --fmax [fmax] --wbands [wbands] [brain] [pg_apply] [bbsm] [nbsm] [spectra] [bbsmz] [nbsmz] [ssz] [corr] [cohe] [phdiff] [fcorr] [storexyz] --output \"results\" ", 
     "inputs": [
         {
@@ -229,5 +231,11 @@
             "name": "Output folder"
         }
     ], 
-    "description": "qeeg application"
+    "description": "qeeg application",
+    "tags": {
+        "domain": [
+            "neuroinformatics", 
+            "eeg"
+        ]
+    }
 }
