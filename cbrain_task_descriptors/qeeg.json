@@ -3,7 +3,7 @@
     "name": "qeeg", 
     "author": "Neuroinformatics Collaboratory", 
     "descriptor-url": "https://github.com/big-data-lab-team/cbrain-plugins-eeg/blob/master/cbrain_task_descriptors/qeeg.json", 
-    "command-line": "qeegt.sh --input [input_directory]/[basename] --state [state] --lwin [lwin] --fmin [fmin] --freqres [freqres] --fmax [fmax] --wbands [wbands] [brain] [pg_apply] [bbsm] [nbsm] [spectra] [bbsmz] [nbsmz] [ssz] [corr] [cohe] [phdiff] [fcorr] [storexyz] --output \"results\" ", 
+    "command-line": "qeegt.sh --input [input_directory]/[basename] --state [state] --lwin [lwin] --fmin [fmin] --freqres [freqres] --fmax [fmax] --wbands [wbands] [brain] [pg_apply] [bbsm] [nbsm] [spectra] [bbsmz] [nbsmz] [ssz] [corr] [cohe] [phdiff] [fcorr] [storexyz] [OUTPUT] ", 
     "inputs": [
         {
             "description": "Directory containing the files to process.", 
@@ -214,7 +214,16 @@
             "type": "Flag", 
             "id": "storexyz", 
             "name": "XYZ components"
-        }
+        },{
+            "id": "output",
+            "name": "Output Directory",
+            "type": "String",
+            "value-key":"[OUTPUT]",
+            "description": "Place to store outputs",
+            "command-line-flag":"--output",
+            "default-value":"results",
+            "optional": true
+	}
     ], 
     "container-image": {
         "image": "mcin/qeeg:latest", 
@@ -223,11 +232,11 @@
     "schema-version": "0.5", 
     "output-files": [
         {
-            "description": "A folder containing the output files.", 
+            "description": "A folder containing the output files and a copy of the input files.", 
             "list": false, 
             "id": "folder_out", 
             "optional": false, 
-            "path-template": "results", 
+            "path-template": "[OUTPUT]", 
             "name": "Output folder"
         }
     ], 
