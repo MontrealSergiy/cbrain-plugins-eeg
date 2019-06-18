@@ -1,6 +1,6 @@
 {
     "schema-version": "0.5",
-    "name": "spark",
+    "name": "sparknolist",
     "tool-version": "v0.1.0",
     "tags": {
                  "domain": "neuroinformatics"
@@ -110,6 +110,7 @@
          {
             "id": "network_scales_step",
             "optional": false,
+            "value-key": "[NETWORK_SCALES_STEP]", 
             "type": "Number",
             "name": "Step of network scales ",
             "default-value": 2
@@ -119,7 +120,7 @@
         {
             "id": "network_scales_end",
             "optional": false,
-          
+            "value-key": "[NETWORK_SCALES_END]", 
             "type": "Number",
             "name": "Step of network scales",
             "default-value": 30
@@ -173,13 +174,13 @@
             "optional": true,
             "value-key": "[BLOCK_WINDOW_LENGTH_STEP]",
             "type": "Number",
-            "name": "Start of Block window length ",
+            "name": "Step of Block window length ",
             "default-value": 1
         },
         {
             "id": "block_window_length_end",
             "optional": true,
-            "value-key": "[BLOCK_WINDOW_LENGTH_STEP]",
+            "value-key": "[BLOCK_WINDOW_LENGTH_END]",
             "type": "Number",
             "name": "End of Block window length ",
             "default-value": 30
