@@ -6,7 +6,7 @@
                  "domain": "neuroinformatics"
     },
 
-    "command-line": "octave --no-gui $SPARK_ROOT/SPARK.m [FMRI_DATA] [MASK] [OUT_DIR] [NB_RESAMPLING] [NETWORK_SCALES_START] [NETWORK_SCALES_STEP][NETWORK_SCALES_END][NB_ITERATIONS] [P_VALUE] [RESAMPLING_METHOD] [BLOCK_WINDOW_LENGTH_START][BLOCK_WINDOW_LENGTH_STEP] [BLOCK_WINDOW_LENGTH_END][DICT_INIT_METHOD] [SPARSE_CODING_METHOD] [PRESERVE_ATOMS_DICT] [MAX_PARALLEL_JOBS] [PSOM_GB_CONF]",
+    "command-line": "octave --no-gui $SPARK_ROOT/SPARK.m [FMRI_DATA] [MASK] [OUT_DIR] [NB_RESAMPLING] [NETWORK_SCALES_START]  [NETWORK_SCALES_STEP]  [NETWORK_SCALES_END]  [NB_ITERATIONS] [P_VALUE] [RESAMPLING_METHOD] [BLOCK_WINDOW_LENGTH_START]  [BLOCK_WINDOW_LENGTH_STEP]  [BLOCK_WINDOW_LENGTH_END] [DICT_INIT_METHOD] [SPARSE_CODING_METHOD] [PRESERVE_ATOMS_DICT] [MAX_PARALLEL_JOBS] [PSOM_GB_CONF]",
     "description": "SParsity-based Analysis of Reliable K-hubness for Brain Functional Connectivity fMRI", 
     "container-image":
         {
@@ -122,7 +122,7 @@
             "optional": false,
             "value-key": "[NETWORK_SCALES_END]", 
             "type": "Number",
-            "name": "Step of network scales",
+            "name": "End of network scales",
             "default-value": 30
         },
 
@@ -165,7 +165,7 @@
             "value-key": "[BLOCK_WINDOW_LENGTH_START]",
             "type": "Number",
             "command-line-flag": "--block-window-length",
-            "name": "Start of Block window length ",
+            "name": "Start of block window length ",
             "default-value": 10,
             "description": "Three parameters, respectively: [begin] [step] [end] of block window length, used to  create a regularly-spaced vector. In order to specify a  single number, for instance '15', enter the same number for  [begin] and [end], as: 15 1 15.  A number in this vector corresponds to a window length used  in the circular block bootstrap. The unit of the window  length is \u2018time-point\u2019 with each time-point indicating a 3D scan at each TR. If multiple numbers are specified, then a number is randomly selected from the list at each  resampling.  It is recommended to use a minimum of sqrt(T), where T is  the total number of time points in the fMRI time-course. It is also recommended to randomize the window length to reduce a bias by window size.  (valid values: value>=1) (default: 10 1 30)   "
         },
@@ -174,7 +174,7 @@
             "optional": true,
             "value-key": "[BLOCK_WINDOW_LENGTH_STEP]",
             "type": "Number",
-            "name": "Step of Block window length ",
+            "name": "Step of block window length ",
             "default-value": 1
         },
         {
@@ -182,7 +182,7 @@
             "optional": true,
             "value-key": "[BLOCK_WINDOW_LENGTH_END]",
             "type": "Number",
-            "name": "End of Block window length ",
+            "name": "End of block window length ",
             "default-value": 30
         },
         {
