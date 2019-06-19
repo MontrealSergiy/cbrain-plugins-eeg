@@ -1,0 +1,54 @@
+{
+    "schema-version": "0.5",
+    "name": "listfailure",
+    "tool-version": "v0.1.0",
+    "author": "me",
+    "command-line": "echo this is a [list] and this is a [file] [storexyz]",
+    "description": "A relatively small example to demo how file lists are distorted by cbrain. Steps to reproduce: import to cbrain. Upload a few files. Start a task with two arbitrary file. After fininsh check task details. Observe the command line has file name dublication issues", 
+    "container-image":
+        {
+            
+            "type": "singularity",
+            "image": "multifunkimlab/spark:1.2.1",
+            "index": "docker://"
+
+    },         
+
+    "inputs": [
+        {
+            "id": "list",
+            "optional": false,
+            "value-key": "[list]",
+            "list": true,
+            "command-line-flag": "--list",
+            "description": "Some file list. Could be e.g. the list of files with fMRI data to analyze.",
+            "type": "File",
+            "name": "files (with fMRI data_"
+        },
+        {
+            "id": "file",
+            "optional": false,
+            "value-key": "[file]",
+            "command-line-flag": "--file",
+            "description": "A single file, e.g. a grey-matter mask.",
+            "type": "File",
+            "name": "a file"
+        }
+
+    ],
+
+    "output-files": [
+        {
+            "description": "A pointless folder it is needed to allow cbrain integration", 
+            "list": false, 
+            "id": "a_useless_folder", 
+            "optional": true, 
+            "path-template": "[OUTPUT]", 
+            "name": "Output folder"
+        }
+    ] 
+
+
+
+
+}
