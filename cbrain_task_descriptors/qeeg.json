@@ -56,7 +56,7 @@
             "name": "fmin"
         }, 
         {
-            "description": "Fequency resolution for analysis. Example: \"0.390625\". The analysis will use a frequency band like this: fmin:freqres:fmax. The program will compare this interval with the interval that is obtained for the real frequency parameters of the signal and will match both of them.", 
+            "description": "Frequency resolution for analysis. Example: \"0.390625\". The analysis will use a frequency band like this: fmin:freqres:fmax. The program will compare this interval with the interval that is obtained for the real frequency parameters of the signal and will match both of them.",
             "default-value": 0.390625, 
             "value-key": "[freqres]", 
             "optional": false, 
