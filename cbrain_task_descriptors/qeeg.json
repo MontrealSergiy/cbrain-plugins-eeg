@@ -4,6 +4,7 @@
     "author": "Neuroinformatics Collaboratory", 
     "descriptor-url": "https://github.com/big-data-lab-team/cbrain-plugins-eeg/blob/master/cbrain_task_descriptors/qeeg.json", 
     "command-line": "qeegt.sh --input [input_directory]/[basename] --state [state] --lwin [lwin] --fmin [fmin] --freqres [freqres] --fmax [fmax] --wbands [wbands] [brain] [pg_apply] [bbsm] [nbsm] [spectra] [bbsmz] [nbsmz] [ssz] [corr] [cohe] [phdiff] [fcorr] [storexyz] [OUTPUT] ", 
+    "online-platform-urls": [ "https://portal.cbrain.mcgill.ca" ],
     "inputs": [
         {
             "description": "Directory containing the files to process.", 
