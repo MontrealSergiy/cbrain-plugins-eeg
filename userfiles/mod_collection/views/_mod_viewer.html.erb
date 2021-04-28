@@ -6,7 +6,7 @@
 <script>
 <% files = @userfile.list_files.map { |f| {
   :fileName => File.basename(f.name),
-  :url => "#{@userfile.id}/file_collection_content/#{File.basename(f.name)}"
+  :url => "#{@userfile.id}/stream/#{f.name}"
 }} %>
 var files = <%= files.to_json.html_safe %>;
 console.log(files);
